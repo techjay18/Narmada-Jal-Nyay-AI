@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 font-sans;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-xl border border-gray-200 p-5 shadow-sm;
+  }
+  .badge-head   { @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800; }
+  .badge-middle { @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-purple-100 text-purple-800; }
+  .badge-tail   { @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-orange-100 text-orange-800; }
+
+  .badge-critical { @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-red-100 text-red-800; }
+  .badge-high     { @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-orange-100 text-orange-800; }
+  .badge-medium   { @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-yellow-100 text-yellow-800; }
+  .badge-low      { @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800; }
+  .badge-normal   { @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-gray-100 text-gray-600; }
+
+  .btn-primary { @apply bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors; }
+  .btn-ghost   { @apply text-gray-600 hover:text-gray-900 hover:bg-gray-100 px-3 py-2 rounded-lg text-sm font-medium transition-colors; }
+  .stat-card   { @apply card flex flex-col gap-1; }
+
+  .status-normal   { @apply text-green-700 bg-green-50 border-green-200; }
+  .status-warning  { @apply text-yellow-700 bg-yellow-50 border-yellow-200; }
+  .status-high     { @apply text-orange-700 bg-orange-50 border-orange-200; }
+  .status-critical { @apply text-red-700 bg-red-50 border-red-200; }
+}
+
+/* Canal flow gradient bar */
+.equity-bar {
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(to right, #ef4444, #f97316, #eab308, #22c55e);
+}
+
+/* Scrollable table container */
+.table-container {
+  @apply overflow-x-auto rounded-xl border border-gray-200;
+}
+
+/* Spinner */
+.spinner {
+  @apply inline-block w-4 h-4 border-2 border-blue-300 border-t-blue-600 rounded-full animate-spin;
+}
